@@ -1,0 +1,22 @@
+<h1>Main component</h1>
+<input type="text" [(ngModel)] = "parentClientDb.name" />
+<input type="text" [(ngModel)] = "parentClientCif.name" />
+
+<input type="text" (ngModel) = "parentClientDb.getCurrentAddress().getCityTown()" />
+<input type="text" [ngModel] = "parentClientCif.getCurrentAddress().getCityTown()" />
+
+<!--<input [ngModel]='model.getProperty()' (ngModelChange)="model.setProperty($event)">-->
+
+
+<div>
+
+    <child-comp
+            [childClientDbAddr] = "parentClientDb.getCurrentAddress()"
+            [childClientCifAddr] = "parentClientCif.getCurrentAddress()"
+
+            [childClientDb] = "parentClientDb"
+            [childClientCif] = "parentClientCif"
+
+            ></child-comp>
+
+</div>

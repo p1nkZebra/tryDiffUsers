@@ -1,0 +1,10 @@
+
+<h1>Child module</h1>
+<input type="text" [(ngModel)] = "childClientDbAddr.street" />
+<input type="text" [(ngModel)] = "childClientCifAddr.street" />
+
+<input type="text" [ngModel] = "childClientDbAddr.getCityTown()" />
+<input type="text" (ngModel) = "childClientCifAddr.getCityTown()" />
+
+<input type="text" [(ngModel)] = "childClientDb.name" />
+<input type="text" [(ngModel)] = "childClientCif.name" />
